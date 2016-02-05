@@ -64,7 +64,7 @@
                     <section>
                         <ol>
                             <li>Intro</li>
-                            <li>Tecnologie coinvolte</li>
+                            <li>Background</li>
                             <li>Data Driven Documents</li>
                             <li>Grafici di base con NVD3</li>
                             <li>Tecniche avanzate</li>
@@ -72,55 +72,115 @@
 					</section>
 					<section>
 						<h3>1. Intro</h3>
-                        <li>esempi e struttura del corso (adesso)</li>
-                        <li>setup ambiente di sviluppo - Hello World</li>
+                        <ul>
+                            <li>Esempi e struttura del corso (adesso)</li>
+                            <li>Setup ambiente di sviluppo</li>
+                            <li>Hello World!</li>
+                        </ul>
 					</section>
                     <section>
-						<h3>2. Tecnologie coinvolte</h3>
-						<li>ripasso HTML, CSS e JS</li>
-                        <li>lo standard SVG</li>
+						<h3>2. Background</h3>
+						<ul>
+                            <li>Ripasso HTML, CSS e JS</li>
+                            <li>Lo standard SVG</li>
+                            <li>Teoria della visualizzazione dati</li>
+                        </ul>
 					</section>
                     <section>
 						<h3>3. Data Driven Documents</h3>
-                        <li>teoria della visualizzazione dati</li>
-                        <li>selection</li>
-                        <li>join</li>
-                        <li>callback</li>
-                        <li>animazioni</li>
+                        <ul>
+                            <li><code>select()</code></li>
+                            <li><code>data()</code></li>
+                            <li><code>enter()</code></li>
+                            <li><code>transition()</code></li>
+                        </ul>
 					</section>
                     <section>
 						<h3>4. Grafici base con NVD3</h3>
-						<li>linee, barre</li>
-                        <li>torte, scatterplot</li>
-					</section>
+						<ul>
+                            <li>Linee</li>
+                            <li>Barre</li>
+                            <li>Torte</li>
+                            <li>Scatter</li>
+                        </ul>
+                    </section>
                     <section>
 						<h3>5. Tecniche avanzate</h3>
-                        <li>utility per il trattamento dei dati</li>
-                        <li>layouts</li>
-                        <li>mappe geografiche</li>
+                        <ul>
+                            <li>Utility dati</li>
+                            <li>Layouts</li>
+                            <li>Mappe geografiche</li>
+                        </ul>
 					</section>
 				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+                
+                <section>
+					<h2>1. Setup ambiente</h2>
+                    <ul>
+                        <li>facile: console del browser</li>
+                        <li>medio: file html</li>
+                        <li>difficile: server locale</li>
+                    </ul>
+				</section>
+                
+                <section>
+					<h2>1. Hello World!</h2>
+                    <svg class="stretch">
+                        <rect id="hello-world" width="50px" height="100px" x="0px" y="50px" fill="blue"/>
+                    </svg>
+                    <pre><code class="hljs" data-trim contenteditable>
+d3.select('#hello-world')
+    .transition()
+    .duration(3000)
+    .attr('x', '400px')
+    .attr('width', '200px')
+    .attr('fill', 'red');
+					</code></pre>
+                    <button class="run-code">Run Code</button>
+				</section>
+                
+                <section>
+					<h2>2. HTML</h2>
+                    <p>
+                        markup glory
+                    </p> 
+				</section>
+                
+                <section>
+					<h2>2. CSS</h2>
+                    <p>
+                        cascading stylesheet glory
+                    </p> 
+				</section>
+                
+                <section>
+					<h2>2. JS</h2>
+                    <p>
+                        Javascript glory
+                    </p> 
+				</section>
+                
+                <section>
+					<h2>2. SVG</h2>
+                    <section>
+                        <p>
+                            Standard del W3C per la grafica vettoriale
+                        </p>
 					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+                    <section>
+                        <pre><code class="hljs" data-trim contenteditable>rect</code></pre>
+					</section>
+                    <section>
+                        <pre><code class="hljs" data-trim contenteditable>circle</code></pre>
+					</section>
+                    <section>
+                        <pre><code class="hljs" data-trim contenteditable>path</code></pre>
+					</section>
+                    <section>
+                        <pre><code class="hljs" data-trim contenteditable>g</code></pre>
+					</section>
+                    <section>
+                        <pre><code class="hljs" data-trim contenteditable>text</code></pre>
 					</section>
 				</section>
 
@@ -186,46 +246,6 @@
 						You can override background transitions per-slide.
 					</p>
 					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
 				</section>
 
 				<section>
@@ -346,7 +366,19 @@ Reveal.addEventListener( 'customevent', function() {
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
+        <script src="lib/js/jquery.js"></script>
+        <script src="lib/js/d3.js"></script>
 		<script src="js/reveal.js"></script>
+        
+        <!-- TODO: move this code outside -->
+        <script>
+            $(document).ready( function(){
+                $('.run-code').click( function(e){
+                    var codeToRun = $(this).siblings('pre').text();
+                    eval( codeToRun );
+                });
+            });
+        </script>
 
 		<script>
 
